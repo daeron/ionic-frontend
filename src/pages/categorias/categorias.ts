@@ -17,8 +17,9 @@ import { API_CONFIG } from '../../config/api.config';
   templateUrl: 'categorias.html',
 })
 export class CategoriasPage {
-  
+
   bucketUrl: string = API_CONFIG.bucketBaseUrl;
+
   items: CategoriaDTO[];
 
   constructor(
@@ -32,8 +33,6 @@ export class CategoriasPage {
       .subscribe(response => {
         this.items = response;
       },
-      error => {
-        console.log(error);
-      });
+      error => {});
   }
 }
